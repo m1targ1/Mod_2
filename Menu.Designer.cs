@@ -1,6 +1,6 @@
 ﻿namespace Mod_2
 {
-    partial class Form1
+    partial class Menu
     {
         /// <summary>
         ///  Required designer variable.
@@ -46,6 +46,7 @@
             Button_ClassPerson.TabIndex = 0;
             Button_ClassPerson.Text = "Класс Person (1)";
             Button_ClassPerson.UseVisualStyleBackColor = true;
+            Button_ClassPerson.Click += Button_ClassPerson_Click;
             // 
             // Button_ClassShape
             // 
@@ -55,6 +56,7 @@
             Button_ClassShape.TabIndex = 1;
             Button_ClassShape.Text = "Класс Shape (2)";
             Button_ClassShape.UseVisualStyleBackColor = true;
+            Button_ClassShape.Click += Button_ClassShape_Click;
             // 
             // Button_Composition
             // 
@@ -64,6 +66,7 @@
             Button_Composition.TabIndex = 2;
             Button_Composition.Text = "Композиция (3)";
             Button_Composition.UseVisualStyleBackColor = true;
+            Button_Composition.Click += Button_Composition_Click;
             // 
             // Button_Drawable
             // 
@@ -73,6 +76,7 @@
             Button_Drawable.TabIndex = 3;
             Button_Drawable.Text = "Интерфейс Drawable (4)";
             Button_Drawable.UseVisualStyleBackColor = true;
+            Button_Drawable.Click += Button_Drawable_Click;
             // 
             // Button_Temperature
             // 
@@ -82,6 +86,7 @@
             Button_Temperature.TabIndex = 4;
             Button_Temperature.Text = "Класс TemperatureSensor (5)";
             Button_Temperature.UseVisualStyleBackColor = true;
+            Button_Temperature.Click += Button_Temperature_Click;
             // 
             // Button_Employee
             // 
@@ -91,6 +96,7 @@
             Button_Employee.TabIndex = 5;
             Button_Employee.Text = "Класс Сотрудник (В3_1)";
             Button_Employee.UseVisualStyleBackColor = true;
+            Button_Employee.Click += Button_Employee_Click;
             // 
             // Button_TwoVar
             // 
@@ -100,6 +106,7 @@
             Button_TwoVar.TabIndex = 6;
             Button_TwoVar.Text = " Класс с двумя переменными (В3_2)";
             Button_TwoVar.UseVisualStyleBackColor = true;
+            Button_TwoVar.Click += Button_TwoVar_Click;
             // 
             // Button_Library
             // 
@@ -109,8 +116,9 @@
             Button_Library.TabIndex = 7;
             Button_Library.Text = "Класс Библиотека (В3_3)";
             Button_Library.UseVisualStyleBackColor = true;
+            Button_Library.Click += Button_Library_Click;
             // 
-            // Form1
+            // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -123,8 +131,9 @@
             Controls.Add(Button_Composition);
             Controls.Add(Button_ClassShape);
             Controls.Add(Button_ClassPerson);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "Menu";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Menu";
             ResumeLayout(false);
         }
 
