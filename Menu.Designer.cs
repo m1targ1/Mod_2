@@ -36,11 +36,12 @@
             Button_Employee = new Button();
             Button_TwoVar = new Button();
             Button_Library = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // Button_ClassPerson
             // 
-            Button_ClassPerson.Location = new Point(12, 12);
+            Button_ClassPerson.Location = new Point(12, 27);
             Button_ClassPerson.Name = "Button_ClassPerson";
             Button_ClassPerson.Size = new Size(221, 23);
             Button_ClassPerson.TabIndex = 0;
@@ -50,7 +51,7 @@
             // 
             // Button_ClassShape
             // 
-            Button_ClassShape.Location = new Point(12, 41);
+            Button_ClassShape.Location = new Point(12, 56);
             Button_ClassShape.Name = "Button_ClassShape";
             Button_ClassShape.Size = new Size(221, 23);
             Button_ClassShape.TabIndex = 1;
@@ -60,7 +61,7 @@
             // 
             // Button_Composition
             // 
-            Button_Composition.Location = new Point(12, 70);
+            Button_Composition.Location = new Point(12, 85);
             Button_Composition.Name = "Button_Composition";
             Button_Composition.Size = new Size(221, 23);
             Button_Composition.TabIndex = 2;
@@ -70,7 +71,7 @@
             // 
             // Button_Drawable
             // 
-            Button_Drawable.Location = new Point(12, 99);
+            Button_Drawable.Location = new Point(12, 114);
             Button_Drawable.Name = "Button_Drawable";
             Button_Drawable.Size = new Size(221, 23);
             Button_Drawable.TabIndex = 3;
@@ -80,7 +81,7 @@
             // 
             // Button_Temperature
             // 
-            Button_Temperature.Location = new Point(12, 128);
+            Button_Temperature.Location = new Point(12, 143);
             Button_Temperature.Name = "Button_Temperature";
             Button_Temperature.Size = new Size(221, 24);
             Button_Temperature.TabIndex = 4;
@@ -90,7 +91,7 @@
             // 
             // Button_Employee
             // 
-            Button_Employee.Location = new Point(12, 158);
+            Button_Employee.Location = new Point(12, 173);
             Button_Employee.Name = "Button_Employee";
             Button_Employee.Size = new Size(221, 23);
             Button_Employee.TabIndex = 5;
@@ -100,7 +101,7 @@
             // 
             // Button_TwoVar
             // 
-            Button_TwoVar.Location = new Point(12, 187);
+            Button_TwoVar.Location = new Point(12, 202);
             Button_TwoVar.Name = "Button_TwoVar";
             Button_TwoVar.Size = new Size(221, 23);
             Button_TwoVar.TabIndex = 6;
@@ -110,7 +111,7 @@
             // 
             // Button_Library
             // 
-            Button_Library.Location = new Point(12, 216);
+            Button_Library.Location = new Point(12, 231);
             Button_Library.Name = "Button_Library";
             Button_Library.Size = new Size(221, 23);
             Button_Library.TabIndex = 7;
@@ -118,11 +119,21 @@
             Button_Library.UseVisualStyleBackColor = true;
             Button_Library.Click += Button_Library_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(94, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(59, 15);
+            label1.TabIndex = 8;
+            label1.Text = "Модуль 2";
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(246, 253);
+            ClientSize = new Size(246, 264);
+            Controls.Add(label1);
             Controls.Add(Button_Library);
             Controls.Add(Button_TwoVar);
             Controls.Add(Button_Employee);
@@ -135,6 +146,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -147,5 +159,6 @@
         private Button Button_Employee;
         private Button Button_TwoVar;
         private Button Button_Library;
+        private Label label1;
     }
 }
