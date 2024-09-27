@@ -47,6 +47,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(tableCompasition);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Compasition_3_";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Compasition(3)";

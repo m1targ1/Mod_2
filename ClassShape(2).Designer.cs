@@ -210,6 +210,7 @@
             Controls.Add(panel1);
             Controls.Add(Button_Rectangle);
             Controls.Add(Button_Circle);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "ClassShape_2_";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ClassShape(2)";

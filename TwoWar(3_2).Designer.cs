@@ -35,6 +35,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "TwoWar_3_2_";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "TwoWar(3_2)";

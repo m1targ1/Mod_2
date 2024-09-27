@@ -35,6 +35,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "TemperatureSensor_5_";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "TemperatureSensor(5)";

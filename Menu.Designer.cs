@@ -142,6 +142,7 @@
             Controls.Add(Button_Composition);
             Controls.Add(Button_ClassShape);
             Controls.Add(Button_ClassPerson);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Menu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu";

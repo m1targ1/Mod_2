@@ -154,6 +154,7 @@
             Controls.Add(Check_List_person);
             Controls.Add(Add_Person);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "ClassPerson_1_";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ClassPerson(1)";
