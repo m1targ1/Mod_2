@@ -28,19 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            tableCompasition = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)tableCompasition).BeginInit();
             SuspendLayout();
+            // 
+            // tableCompasition
+            // 
+            tableCompasition.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            tableCompasition.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tableCompasition.Location = new Point(12, 12);
+            tableCompasition.Name = "tableCompasition";
+            tableCompasition.Size = new Size(776, 426);
+            tableCompasition.TabIndex = 0;
             // 
             // Compasition_3_
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(tableCompasition);
             Name = "Compasition_3_";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Compasition(3)";
+            ((System.ComponentModel.ISupportInitialize)tableCompasition).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView tableCompasition;
     }
 }
