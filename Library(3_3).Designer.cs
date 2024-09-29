@@ -68,7 +68,7 @@
             button_Add_Author.Text = "Добавить автора";
             button_Add_Author.UseVisualStyleBackColor = true;
             button_Add_Author.Click += button_Add_Author_Click;
-            // 
+            //  
             // button_Add_Book
             // 
             button_Add_Book.Location = new Point(205, 12);

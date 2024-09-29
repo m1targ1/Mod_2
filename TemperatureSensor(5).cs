@@ -1,11 +1,4 @@
-﻿using System;
-using System.ComponentModel;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-
-namespace Mod_2
+﻿namespace Mod_2
 {
     public partial class TemperatureSensor_5_ : Form
     {

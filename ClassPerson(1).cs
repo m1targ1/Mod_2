@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
-namespace Mod_2
+﻿namespace Mod_2
 {
     public partial class ClassPerson_1_ : Form
     {

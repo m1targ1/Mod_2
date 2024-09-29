@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-
-namespace Mod_2
+﻿namespace Mod_2
 {
     public partial class TwoWar_3_2_ : Form
     {

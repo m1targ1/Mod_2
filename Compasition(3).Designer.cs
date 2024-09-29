@@ -33,7 +33,7 @@
             SuspendLayout();
             // 
             // tableCompasition
-            // 
+            //  
             tableCompasition.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             tableCompasition.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tableCompasition.Location = new Point(12, 12);

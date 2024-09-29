@@ -137,7 +137,7 @@
             textBox_salary.TabIndex = 9;
             // 
             // tableEmployee
-            // 
+            //  
             tableEmployee.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             tableEmployee.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tableEmployee.Enabled = false;

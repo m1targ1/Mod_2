@@ -64,7 +64,7 @@
                 }
                 Authors newAuthor = new Authors(surname, name, birthYear); // Создание нового объекта типа Authors
                 library.AddAuthor(newAuthor);
-                comboBox_Choise_author.Items.Add(newAuthor); // Добавляем объект
+                comboBox_Choise_author.Items.Add(newAuthor); // Добавление объекта в бокс для выбора
                 // Очистка и отключение элементов управления
                 textBox_SurName.Clear(); textBox_Name.Clear(); textBox_BirthYear.Clear(); textBox_SurName.Enabled = false;
                 textBox_Name.Enabled = false; textBox_BirthYear.Enabled = false; button_authors.Enabled = false;
@@ -90,8 +90,7 @@
                 Books newBook = new Books(title, year, selectedAuthor); // Создание нового объекта типа Books
                 library.AddBook(newBook);
                 tableLibrary.Rows.Add(bookCounter++, title, year, selectedAuthor.Name, selectedAuthor.BirthYear); // Добавление в таблицу
-                // Очистка полей ввода
-                textBox_Title.Clear(); textBox_Year.Clear();
+                textBox_Title.Clear(); textBox_Year.Clear(); // Очистка полей ввода
             }
             catch (FormatException)
             {
@@ -100,34 +99,34 @@
         }
         private void button_Del_Click(object sender, EventArgs e)
         {
-                // Получкние введённых данных
-                string title = textBox_Del_Title.Text;
-                if (string.IsNullOrWhiteSpace(title))
-                {
-                    MessageBox.Show("Пожалуйста, укажите название книги для удаления.");
-                    return;
-                }
+            string title = textBox_Del_Title.Text; // Получаем название книги из текстового поля
+            // Проверка, что название книги не пустое
+            if (string.IsNullOrEmpty(title))
+            {
+                MessageBox.Show("Пожалуйста, введите название книги для удаления.");
+                return;
+            }
+            // Попытка удалить книгу из библиотеки
+            bool removed = library.RemoveBook(title);
 
-                bool removed = library.RemoveBook(title);
-                if (removed)
+            if (removed)
+            {
+                // Обновление таблицы, если книга была удалена
+                foreach (DataGridViewRow row in tableLibrary.Rows)
                 {
-                    // Обновление таблицы, если книга была удалена
-                    foreach (DataGridViewRow row in tableLibrary.Rows)
+                    if (row.Cells[1].Value.ToString() == title)
                     {
-                        if (row.Cells[1].Value.ToString() == title)
-                        {
-                            tableLibrary.Rows.Remove(row);
-                            bookCounter--; // Счётчик уменьшается
-                            break;
-                        }
+                        tableLibrary.Rows.Remove(row);
+                        bookCounter--; // Уменьшение счётчика
+                        break;
                     }
-                    MessageBox.Show($"Книга '{title}' удалена.");
                 }
-                else
-                {
-                    MessageBox.Show("Книга не найдена.");
-                }
-
+                MessageBox.Show($"Книга '{title}' удалена.");
+            }
+            else
+            {
+                MessageBox.Show("Книга не найдена.");
+            }
         }
         private void button_search_Click(object sender, EventArgs e)
         {
@@ -139,8 +138,8 @@
                     MessageBox.Show("Пожалуйста, выберите критерий поиска.");
                     return;
                 }
-                string criteria = comboBox_criteria_search.SelectedItem.ToString();
-                string searchValue = textBox_search.Text;
+                string criteria = comboBox_criteria_search.SelectedItem.ToString(); // Выбор критерия
+                string searchValue = textBox_search.Text; // Получение данных из поля
                 List<Books> foundBooks = new List<Books>();
                 // Поиск в зависимости от выбранного критерия
                 if (criteria == "Год")
@@ -168,8 +167,7 @@
                     }
                 }
                 // Очистка таблицы и добавление найденных книг
-                tableLibrary.Rows.Clear();
-                bookCounter = 1;
+                tableLibrary.Rows.Clear(); bookCounter = 1;
                 foreach (var book in foundBooks)
                 {
                     tableLibrary.Rows.Add(bookCounter++, book.Title, book.Year, book.Author.Name, book.Author.BirthYear);
@@ -203,7 +201,6 @@
         public string Surname { get; set; }
         public string Name { get; set; }
         public int BirthYear { get; set; }
-
         public Authors(string surname, string name, int birthYear)
         {
             Surname = surname;
@@ -221,7 +218,6 @@
         public string Title { get; set; }
         public int Year { get; set; }
         public Authors Author { get; set; }
-
         public Books(string title, int year, Authors author)
         {
             Title = title;
@@ -239,7 +235,6 @@
         {
             authorsList.Add(author);
         }
-
         // Добавление книги
         public void AddBook(Books book)
         {
