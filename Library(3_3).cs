@@ -89,7 +89,7 @@
                 }
                 Books newBook = new Books(title, year, selectedAuthor); // Создание нового объекта типа Books
                 library.AddBook(newBook);
-                tableLibrary.Rows.Add(bookCounter++, title, year, selectedAuthor.Name, selectedAuthor.BirthYear); // Добавление в таблицу
+                tableLibrary.Rows.Add(bookCounter++, title, year, selectedAuthor.Surname + " " + selectedAuthor.Name, selectedAuthor.BirthYear); // Добавление в таблицу
                 textBox_Title.Clear(); textBox_Year.Clear(); // Очистка полей ввода
             }
             catch (FormatException)
@@ -170,7 +170,7 @@
                 tableLibrary.Rows.Clear(); bookCounter = 1;
                 foreach (var book in foundBooks)
                 {
-                    tableLibrary.Rows.Add(bookCounter++, book.Title, book.Year, book.Author.Name, book.Author.BirthYear);
+                    tableLibrary.Rows.Add(bookCounter++, book.Title, book.Year, book.Author.Surname + " " + book.Author.Name, book.Author.BirthYear);
                 }
                 if (foundBooks.Count == 0)
                 {
@@ -191,7 +191,7 @@
 
             foreach (var book in allBooks)
             {
-                tableLibrary.Rows.Add(bookCounter++, book.Title, book.Year, book.Author.Name, book.Author.BirthYear);
+                tableLibrary.Rows.Add(bookCounter++, book.Title, book.Year, book.Author.Surname + " " + book.Author.Name, book.Author.BirthYear);
             }
         }
     }
