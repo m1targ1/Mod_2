@@ -18,7 +18,7 @@
                 components.Dispose();
             }
             base.Dispose(disposing);
-        } 
+        }
 
         #region Windows Form Designer generated code
 
@@ -132,6 +132,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoValidate = AutoValidate.EnableAllowFocusChange;
             ClientSize = new Size(246, 264);
             Controls.Add(label1);
             Controls.Add(Button_Library);
@@ -143,7 +144,9 @@
             Controls.Add(Button_ClassShape);
             Controls.Add(Button_ClassPerson);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            ImeMode = ImeMode.On;
             Name = "Menu";
+            RightToLeft = RightToLeft.No;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu";
             ResumeLayout(false);
